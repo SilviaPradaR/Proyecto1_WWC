@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>My CV</title>
 </head>
 <body>
@@ -22,41 +22,41 @@
                 <li><a href="./contact.html">Contact</a></li>       
             </ul>
         </nav>
-        <button>Change mode</button>
+        <button class="button button-header">Change mode</button>
     </header>
     
-    <div>
-        <p>SMILE!</p>
-        <p>Contact Me, or... Smile!</p>
+    <div class="intro-contact">
+        <p id="nombreResaltado" class="subtitle">SMILE!</p>
+        <p class="title">Contact Me, or... Smile!</p>
         
-        <div> 
+        <div class="jokes-box"> 
             <p>Geek Jokes!</p>
             <p>One day, I was in a meeting where the room number was 404. I joked that I could not find the room and nobody understood. This is why I have a hard time making friends.</p>
             <p></p>
         </div>
     
-        <input type="submit" value="One More!" href="">
+        <input type="submit" value="One More!" href="" class="button button-jokes">
     </div>
     
-    <div>
-        <h4 id="nombreResaltado">CONTACT ME!</h4>
-        <form>
-            <input type="text" name="Name" placeholder="Name">
-            <input type="email" name="email" placeholder="Email Address">
-            <input type="tel" name="telefono" placeholder="Phone Number">
-            <input type="submit" value="Send">
+    <div class="contact">
+        <h4 id="nombreResaltado" class="subtitle">CONTACT ME!</h4>
+        <form class="form-contact">
+            <input type="text" name="Name" placeholder="Name" class="input">
+            <input type="email" name="email" placeholder="Email Address" class="input">
+            <input type="tel" name="telefono" placeholder="Phone Number" class="input">
+            <input type="submit" value="Send" class="button button-form-contact">
         </form>
     </div>
     
     
-    <footer>
-        <div>
+    <footer class="footer">
+        <div class=name-footer-container">
             <span id="nombreResaltado">Silvia Prada.</span>
             <p>Chemical Engineer & Proyect Manager</p>
         </div>
 
         <div>
-            <span>Usuful Links</span>
+            <span class="subtitle-footer">Usuful Links</span>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -66,7 +66,7 @@
         </div>
             
         <div>
-            <span>Social Media</span>
+            <span class="subtitle-footer">Social Media</span>
             <ul>
                 <li><a href="./index.html">LinkedIn</a></li>
                 <li><a href="./index.html">Github</a></li>
@@ -74,11 +74,13 @@
             </ul>
         </div>
         
-        <div>
-            <span>Hire me</span>
+        <div class="hireMe-container">
+            <span class="subtitle-footer">Hire me</span>
             <p>Enter your email to get my portafolio and CV</p>
-            <input type="text" placeholder="Your email address">
-            <button><a href="./index.html"><img src="img/Telegram.svg" alt="telegram"></a></button>
+            <div class="your-email">
+                <input type="text" placeholder="Your email address" class="input-footer">
+                <button class="button button-footer" ><a href="./index.html"><img src="img/Telegram.svg" alt="telegram"></a></button>
+            </div>
             
         </div>
     </footer>
