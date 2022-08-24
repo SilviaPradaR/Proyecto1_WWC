@@ -10,7 +10,6 @@
     --grey:#7B7B7B;
     --panache:#F5FBF2;
     --grafito:#1c1c1c;
-
 }
 
 *{
@@ -109,10 +108,6 @@ main img{
     border-radius: 50%;
     margin-bottom: 40px;
 }
-
-/* .information-container{
-    display: inline-block;
-} */
 
 .information-content{
     display: grid;
@@ -214,7 +209,6 @@ h2 #nombreResaltado{
 .hireMe-container p{
     color: grey;
     margin-top:20px;
-    
 }
 
 .your-email{
@@ -247,19 +241,16 @@ h2 #nombreResaltado{
     display:flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    
 }
 .aboutMe img{
     height: 620px;
     width: 590px;
-    
 }
 .info-aboutMe{
     margin: 30px;
     padding: 20px;
     line-height: 30px;
 }
-
 .title{
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
@@ -291,7 +282,6 @@ h2 #nombreResaltado{
     color: var(--blue-charcoal);
 }
 
-
 /*-----------Experience-------------*/
 
 .intro-experience{
@@ -306,9 +296,6 @@ h2 #nombreResaltado{
 .intro-experience h2{
     margin-top: 10px;
 }
-/* .main-container{
-    display: block;
-} */
 
 .cards-experience-container{
     display: flex;
@@ -344,20 +331,13 @@ h2 #nombreResaltado{
     font-size: 15px;
     font-weight: 400;
 }
-/* .info-experience a{
-    display: block;
-    margin-top: 8px;
-    
-} */
 .info-text{
     margin:15px 0;
     line-height: 34px;
     text-align: justify;
     font-size: 15px;
 }
-/* .info-text p:nth-child(2){
-    margin-top: 10px;
-} */
+
 .info-text a{
     color: var(--black-color);
     text-decoration: underline;
@@ -385,9 +365,11 @@ h2 #nombreResaltado{
 }
 
 .jokes-box p:nth-child(2){
-    margin-top: 10px;
+    margin: 10px 0 10px 0;
 }
-
+.jokes-box p:nth-child(3){
+    margin: 10px 0 10px 0;
+}
 .contact{
     text-align: center;
     margin-bottom: 40px;
@@ -417,6 +399,7 @@ h2 #nombreResaltado{
     margin-bottom:40px;
     position: relative;
     left: 38%;
+    cursor: pointer;
 }
 
 .button-form-contact{
