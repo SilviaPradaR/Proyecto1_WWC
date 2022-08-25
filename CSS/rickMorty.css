@@ -103,14 +103,17 @@ nav ul{
 }
 
 /**********************SECTION**********************/
-section{
+.container{
     background-color: var(--background-cielo);
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+} 
+.characters{
+    background-color: var(--background-cielo);
 }
-section p{
+section .message{
     font-family: 'Inter', sans-serif;
     color: var(--white-color);
     font-size: 32px;
@@ -119,9 +122,71 @@ section p{
     height: 127px;
     line-height: 40px;
     text-align: center;
-    justify-items: center;
+    justify-content: center;
 }
 
+.characters .characters-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 70px;
+    place-content: center;
+    padding: 70px;
+}
+.characters .character-card{
+    background-color: var(--background-btn);
+    color: var(--color-text-ppal);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    height: 480px;
+    padding: 20px;
+}
+.character-card span{
+    font-size: 24px;
+    font-weight: bold;
+}
+.character-info figure{
+    background-color: var(--white-color);
+    width: 270px;
+    height: 270px;
+    border-radius: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 12px;
+}
+.character-info figure img{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 270px;
+    height: 270px
+
+}
+
+div.character-info{
+    font-size: 16px;
+
+}
+div.character-info p:nth-child(1){
+    color: var(--footer-text);
+    background-color: var(--nav-footer-background);
+    border-radius: 10px;
+    display:inline-flex;
+    margin-bottom: 12px;
+    margin-top:16px;
+    width: 84px;
+    height: 25px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.character-info p:nth-child(2), .character-info p:nth-child(3){
+    font-weight: 400;
+    margin: 8px;
+} 
+
+
+ 
 /*******************FOOTER***********************/
 footer{
     background-color: var(--nav-footer-background);
