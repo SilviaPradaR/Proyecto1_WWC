@@ -192,7 +192,9 @@ h2 #nombreResaltado{
     font-size: 30px;
     font-weight: bold;
 }
-
+.name-footer-container{
+    width: 250px;
+}
 .name-footer-container p{
     font-weight: 600;
     font-size: 16px;
@@ -265,6 +267,7 @@ h2 #nombreResaltado{
     display:flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    
 }
 .aboutMe img{
     height: 620px;
@@ -274,6 +277,7 @@ h2 #nombreResaltado{
     margin: 30px;
     padding: 20px;
     line-height: 30px;
+    width: 682px;
 }
 .title{
     font-family: 'Roboto', sans-serif;
