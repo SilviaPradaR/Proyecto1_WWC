@@ -77,6 +77,9 @@ h1{
     margin-top:25px;
     line-height: 140%;
 }
+#negrita{
+    font-weight: bold;
+}
 
 /**********************NAVBAR**********************/
 li{
@@ -128,7 +131,7 @@ section .message{
 .characters .characters-container{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 70px;
+    gap: 30px;
     place-content: center;
     padding: 70px;
 }
@@ -137,12 +140,12 @@ section .message{
     color: var(--color-text-ppal);
     border-radius: 20px;
     text-align: center;
-    width: 340px;
-    height: 480px;
+    width: 320px; 
+    height: 480px; 
     padding: 20px;
 }
 .character-card span{
-    font-size: 24px;
+    font-size: 22.9px;
     font-weight: bold;
 }
 .character-info figure{
@@ -172,7 +175,7 @@ div.character-info p:nth-child(1){
     border-radius: 10px;
     display:inline-flex;
     margin-bottom: 12px;
-    margin-top:16px;
+    margin-top:20px;
     width: 84px;
     height: 25px;
     font-weight: bold;
@@ -201,7 +204,7 @@ footer{
 .name-footer-container span{
     font-family: 'Poppins', sans-serif;
     color: var(--white-color);
-    font-size:30px;
+    font-size:32px;
     font-weight: bold;
 }
 .name-footer-container{
@@ -214,12 +217,12 @@ footer{
 }
 .subtitle-footer{
     color: var(--white-color);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 .hireMe-container p{
    margin-top:15px;
-   font-size: 16px;
+   font-size: 18px;
 }  
 .hireMe-container p a{
     color: var(--footer-text);
@@ -235,7 +238,7 @@ footer{
 .usuful-links ul li a, 
 .social-media ul li a{
     color: var(--footer-text);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 .usuful-links ul li a:hover, 

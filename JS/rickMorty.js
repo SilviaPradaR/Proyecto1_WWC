@@ -4,16 +4,32 @@ let males = document.querySelector("#Males");
 let alive = document.querySelector("#Alive");
 let dead = document.querySelector("#Dead");
 
-allCharacters.addEventListener("click", selectAllCharacthers);
+allCharacters.addEventListener("click", selectAllCharacters);
 females.addEventListener("click", selectFemales);
 males.addEventListener("click", selectMales);
 alive.addEventListener("click", selectAlive);
 dead.addEventListener("click", selectDead);
+document.querySelector(".characters")
 
-function selectAllCharacthers(){
+// esta=document.querySelector(".characters")
+
+// esta.classList.replace("characters","container")
+
+// esta.classList.replace("container","characters")
+
+
+function selectAllCharacters(){
     alert("Seleccionaste categoria All");
     console.log("Aqui están los personajes")
-}
+};
+
+const results = fetch("https://rickandmortyapi.com/api/character")
+results.then(response=>response.json())
+.then(data=>{
+    crearCards(data.results)
+})
+
+
 // function selectAllCharacthers(done){
 //     const results = fetch("https://rickandmortyapi.com/api/character");
 //     results.then(response => response.json()).then(data=>{
@@ -64,11 +80,11 @@ function selectDead(){
     alert("Seleccionaste categoria dead");
 }
 
-fetch("https://rickandmortyapi.com/api/character")
-.then(response=>response.json())
-.then(data=>{
-    crearCards(data.results)
-})
+// fetch("https://rickandmortyapi.com/api/character")
+// .then(response=>response.json())
+// .then(data=>{
+//     crearCards(data.results)
+// })
 
 function crearCards(characters){
     let charactersContainer = document.querySelector(".characters-container")
@@ -84,14 +100,11 @@ function crearCards(characters){
             <div>
                 <p>${character.gender}</p>
                 <p>${character.status}</p>
-                <p>Name of the Character</p>
+                <p>${character.species}</p>
             </div>
         </div>
     </div>    
     `
-    
-    
-        
     });
 }
-  
+ 
