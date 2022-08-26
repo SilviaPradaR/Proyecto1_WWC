@@ -133,25 +133,25 @@ section .message{
     grid-template-columns: auto auto auto auto;
     gap: 30px;
     place-content: center;
-    padding: 70px;
+    padding: 50px;
 }
 .characters .character-card{
     background-color: var(--background-btn);
     color: var(--color-text-ppal);
     border-radius: 20px;
     text-align: center;
-    width: 320px; 
-    height: 480px; 
+    width: 287px; 
+    height: 450px; 
     padding: 20px;
 }
 .character-card span{
-    font-size: 22.9px;
+    font-size: 20.2px;
     font-weight: bold;
 }
 .character-info figure{
     background-color: var(--white-color);
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
     margin-left:auto;
     margin-right: auto;
@@ -160,8 +160,8 @@ section .message{
 .character-info figure img{
     border-radius: 20px;
     object-fit: cover;
-    width: 270px;
-    height: 270px
+    width: 250px;
+    height: 250px
 
 }
 
