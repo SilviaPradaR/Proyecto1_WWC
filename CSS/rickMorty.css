@@ -131,9 +131,10 @@ section .message{
 .characters .characters-container{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 30px;
+    /* gap: 30px; */
     place-content: center;
     padding: 50px;
+    justify-content: space-evenly;
 }
 .characters .character-card{
     background-color: var(--background-btn);
@@ -143,6 +144,7 @@ section .message{
     width: 287px; 
     height: 450px; 
     padding: 20px;
+    margin:20px;
 }
 .character-card span{
     font-size: 20.2px;

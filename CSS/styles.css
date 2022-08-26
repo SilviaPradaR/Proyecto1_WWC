@@ -11,13 +11,11 @@
     --panache:#F5FBF2;
     --grafito:#1c1c1c;
 }
-
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-
 body{
     --color-text:#ffffff;
     --background:#212529;
@@ -29,27 +27,22 @@ body{
     background-color: var(--background);
     color: var(--color-text);
 }
-
 body.light-theme{
     --color-text:#212529;
     --background:#e5e5e5;
     background-color: var(--background);
     color: var(--color-text);
 }
-
-
 header{
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-between;
     margin-top:17px;
 }
-
 nav{
     font-size: 18px;
     font-weight: 600;
 }
-
 .button{
     border-radius: 50px ;
     background-color: var(--yellow-orange-color);
@@ -59,7 +52,6 @@ nav{
     font-size: 15px;
     border-style: none;
 }
-
 .button-header{
     width: 160px;
     height: 54px;
@@ -75,7 +67,6 @@ nav{
 .button a{
     color: var(--blue-charcoal);
 }
-
 ul{
     display:flex;
 }
@@ -85,39 +76,32 @@ li{
 nav ul li{
     margin: 25px;
 }
-
 a{
     text-decoration: none;
     color: var(--color-text);
 }
-
 a:link, a:hover{
     color:#FFB742;
 }
-
 main{
     /*font-family: 'inter';*/
     text-align: center;
     margin-top: 80px;
 }
-
 main h2{
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
 }
-
 h1{
     font-size: 48px;
     font-weight: bold;
 }
-
 main h4{
     font-weight: 400;
     margin: 30px;
     font-size: 24px;
 }
-
 main img{
     width: 210px;
     height: 210px;
@@ -125,18 +109,17 @@ main img{
     border-radius: 50%;
     margin-bottom: 40px;
 }
-
 .information-content{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    place-content: center;
+    display: flex;
+    justify-content: space-around;
+    /* grid-template-columns: auto 1fr auto;
+    place-content: center; */
     /*height: 120px;*/
     margin: 24px;
-    gap: 26px;
-    justify-items: center;
+    /* gap: 26px; */
+    /* justify-items: center; */
     padding: 0 75px;
 }
-
 .information-cart {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -147,33 +130,27 @@ main img{
     padding:15px;
     border-radius: 10px;
 }
-
 .information-cart p {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-weight: bold;
 }
-
 .information-cart p:nth-child(2){
     font-size: 16px;
 }
-
 .information-cart p span:nth-child(2){
     color: var(--white-color);
 }
-
 .information-cart #nombreResaltado{
     font-size: 26px;
 }
-
 h2 #nombreResaltado{
     text-decoration: underline;
 }
 #nombreResaltado {
     color: #FFB742;
 }
-
 
 /*----------------Footer---------------*/
 .footer{
@@ -186,10 +163,9 @@ h2 #nombreResaltado{
     justify-content: space-between;
     padding:80px 30px; 
 }
-
 .footer #nombreResaltado {
     font-family:'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
 }
 .name-footer-container{
@@ -200,33 +176,26 @@ h2 #nombreResaltado{
     font-size: 16px;
     margin-top: 12px;
     color: var(--white-color);
-    
 }
-    
 .subtitle-footer{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--white-color);
 }
-
 .footer ul{
     flex-direction: column;
     margin-top: 10px;
 }
-
 .footer ul li{
     margin:10px 0;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
 }
-
 .footer ul li a{
     color: var(--grey);
 }
-
 .footer ul li a:hover{
     color: var(--yellow-orange-color);
-    
 }
 .hireMe-container{
     width: 280px;
@@ -235,11 +204,9 @@ h2 #nombreResaltado{
     color: grey;
     margin-top:20px;
 }
-
 .your-email{
     position:relative;
 }
-
 .input-footer{
     color:var(--panache);
     font-size: 15px;
@@ -247,27 +214,26 @@ h2 #nombreResaltado{
     margin-top: 30px;
     border-radius: 20px;
     height: 40px;
-    width: 250px;
+    width: 280px;
     background-color: var(--blue-charcoal);
     outline:none;
 }
-
 .button-footer{
     height: 40px;
     width: 40px;
     position:absolute;
-    left: unset;
-    right: 20px;
-    top:44%;
+    /* left: unset;*/
+    right: 0px;
+    bottom: 0px;
+    /*top:44%; */
 }
 
 /*---------------about---------------*/
-
 .aboutMe{
     display:flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    
+    justify-content: center;
 }
 .aboutMe img{
     height: 620px;
@@ -292,7 +258,6 @@ h2 #nombreResaltado{
     border-radius: 50px;
     background-color: var(--bunker);
     padding: 8px 20px;
-
 }
 .info-aboutMe p{
     font-size: 14px;
@@ -300,7 +265,6 @@ h2 #nombreResaltado{
     padding-bottom: 15px;
     text-align: justify;
 }
-
 .button-HireMe{
     margin: 20px 0;
     padding: 10px 25px;
@@ -309,14 +273,11 @@ h2 #nombreResaltado{
 .button-HireMe:hover{
     opacity: 1;
 }
-
 .button-HireMe a:hover{
     color: var(--blue-charcoal);
-    
 }
 
 /*-----------Experience-------------*/
-
 .intro-experience{
     text-align: center;
     margin: 70px;
@@ -325,11 +286,9 @@ h2 #nombreResaltado{
 .experience-card{
     font-family: 'Poppins', sans-serif;
 }
-
 .intro-experience h2{
     margin-top: 10px;
 }
-
 .cards-experience-container{
     display: flex;
     /* grid-template-columns: auto 1fr auto; */
@@ -337,7 +296,6 @@ h2 #nombreResaltado{
     place-content: center;
     margin-bottom: 80px;
 }
-
 .experience-card{
     background-color: var(--color-text);
     color: var(--background);
@@ -364,14 +322,12 @@ h2 #nombreResaltado{
     font-size: 15px;
     font-weight: 400;
 }
-
 .info-text{
     margin:15px 0;
     line-height: 34px;
     text-align: justify;
     font-size: 15px;
 }
-
 .info-text a{
     color: var(--background);
     text-decoration: underline;
@@ -381,8 +337,11 @@ h2 #nombreResaltado{
 .intro-contact{
     text-align: center;
     margin: 70px 400px;
-    border-bottom: 1px solid var(--grey);
     font-family: 'Poppins', sans-serif;
+}
+.intro-contact-container{
+    display:inline-block;
+    border-bottom: 1px solid var(--grey);
 }
 .jokes-box{
     background-color: var(--color-text);
@@ -397,7 +356,6 @@ h2 #nombreResaltado{
 .jokes-box p:nth-child(1){
     font-weight: bold;
 }
-
 .jokes-box p:nth-child(2){
     margin: 10px 0 10px 0;
 }
@@ -426,20 +384,17 @@ h2 #nombreResaltado{
     color: var(--panache);
     font-size: 16px;
 }
-
 .button-jokes{
     width: 110px;
     height: 30px;
     margin-bottom:40px;
-    position: relative;
-    left: 38%;
+    float:right;
     cursor: pointer;
     opacity:0.9;
 }
 .button-jokes:hover{
     opacity:1;
 }
-
 .button-form-contact{
     margin: 20px 0px;
     width: 70px;
@@ -449,8 +404,12 @@ h2 #nombreResaltado{
     cursor: pointer;
     opacity: 0.9;
 }
-
 .button-form-contact:hover{
     opacity: 1;
 }
 
+@media (max-width:680px){
+    body{
+        background-color: pink;
+    }
+}
