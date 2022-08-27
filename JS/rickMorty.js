@@ -4,11 +4,6 @@ let males = document.getElementById("Males");
 let alive = document.querySelector("#Alive");
 let dead = document.querySelector("#Dead");
 
-//document.querySelector(".container")
-//replaceClass=document.querySelector(".container")
-//esta.classList.replace("characters","container")
-//replaceClass.classList.replace("container","characters")
-
 allCharacters.addEventListener("click", selectAllCharacters);
 females.addEventListener("click", selectFemales);
 males.addEventListener("click", selectMales);
@@ -16,8 +11,13 @@ alive.addEventListener("click", selectAlive);
 dead.addEventListener("click", selectDead);
 
 function selectAllCharacters() {
-    /* replaceClass=document.querySelector(".container")
-    replaceClass.classList.replace("container","characters") */
+    if(document.body.children[3].className=="container"){
+        let clasePadre=document.querySelector(".container");
+        let claseHijo=document.querySelector(".message");
+        clasePadre.removeChild(claseHijo);
+        let replaceClass=document.querySelector(".container");
+        replaceClass.classList.replace("container","characters");
+    }
     cleanCards();
     const results = fetch("https://rickandmortyapi.com/api/character");
     results.then(response => response.json())
@@ -27,6 +27,13 @@ function selectAllCharacters() {
 };
 
 function selectFemales() {
+    if(document.body.children[3].className=="container"){
+        let clasePadre=document.querySelector(".container");
+        let claseHijo=document.querySelector(".message");
+        clasePadre.removeChild(claseHijo);
+        let replaceClass=document.querySelector(".container");
+        replaceClass.classList.replace("container","characters");
+    }
     cleanCards();
     const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=female");
     results.then(response => response.json())
@@ -36,6 +43,13 @@ function selectFemales() {
 };
 
 function selectMales() {
+    if(document.body.children[3].className=="container"){
+        let clasePadre=document.querySelector(".container");
+        let claseHijo=document.querySelector(".message");
+        clasePadre.removeChild(claseHijo);
+        let replaceClass=document.querySelector(".container");
+        replaceClass.classList.replace("container","characters");
+    }
     cleanCards();
     const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=male");
     results.then(response => response.json())
@@ -45,6 +59,13 @@ function selectMales() {
 };
 
 function selectAlive() {
+    if(document.body.children[3].className=="container"){
+        let clasePadre=document.querySelector(".container");
+        let claseHijo=document.querySelector(".message");
+        clasePadre.removeChild(claseHijo);
+        let replaceClass=document.querySelector(".container");
+        replaceClass.classList.replace("container","characters");
+    }
     cleanCards();
     const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=alive");
     results.then(response => response.json())
@@ -54,6 +75,13 @@ function selectAlive() {
 };
 
 function selectDead() {
+    if(document.body.children[3].className=="container"){
+        let clasePadre=document.querySelector(".container");
+        let claseHijo=document.querySelector(".message");
+        clasePadre.removeChild(claseHijo);
+        let replaceClass=document.querySelector(".container");
+        replaceClass.classList.replace("container","characters");
+    }
     cleanCards();
     const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=dead");
     results.then(response => response.json())
