@@ -1,24 +1,25 @@
 let allCharacters = document.querySelector("#AllCharacters");
-let females = document.querySelector("#Females");
-let males = document.querySelector("#Males");
+let females = document.getElementById("Females");
+let males = document.getElementById("Males");
 let alive = document.querySelector("#Alive");
 let dead = document.querySelector("#Dead");
-
-allCharacters.addEventListener("click", selectAllCharacters());
-females.addEventListener("click", selectFemales());
-males.addEventListener("click", selectMales());
-alive.addEventListener("click", selectAlive());
-dead.addEventListener("click", selectDead());
 
 //document.querySelector(".container")
 //replaceClass=document.querySelector(".container")
 //esta.classList.replace("characters","container")
 //replaceClass.classList.replace("container","characters")
 
+allCharacters.addEventListener("click", selectAllCharacters);
+females.addEventListener("click", selectFemales);
+males.addEventListener("click", selectMales);
+alive.addEventListener("click", selectAlive);
+dead.addEventListener("click", selectDead);
 
 function selectAllCharacters() {
-    //alert("Seleccionaste categoria All");
-    const results = fetch("https://rickandmortyapi.com/api/character")
+    /* replaceClass=document.querySelector(".container")
+    replaceClass.classList.replace("container","characters") */
+    cleanCards();
+    const results = fetch("https://rickandmortyapi.com/api/character");
     results.then(response => response.json())
         .then(data => {
             crearCards(data.results)
@@ -26,40 +27,35 @@ function selectAllCharacters() {
 };
 
 function selectFemales() {
-    //alert("Seleccionaste categoria females");
-    console.log("1")
-    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=female")
-    console.log("2")
+    cleanCards();
+    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=female");
     results.then(response => response.json())
-        .then(data => {
-            console.log("3")
-            
-            console.log(data.results)
+        .then(data => {             
             crearCards(data.results)
         })
-}
+};
 
 function selectMales() {
-    //alert("Seleccionaste categoria males");
-    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=male")
+    cleanCards();
+    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&gender=male");
     results.then(response => response.json())
         .then(data => {
             crearCards(data.results)
         })
-}
+};
 
 function selectAlive() {
-    //alert("Seleccionaste categoria alive");
-    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=alive")
+    cleanCards();
+    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=alive");
     results.then(response => response.json())
         .then(data => {
             crearCards(data.results)
         })
-}
+};
 
 function selectDead() {
-    //alert("Seleccionaste categoria dead");
-    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=dead")
+    cleanCards();
+    const results = fetch("https://rickandmortyapi.com/api/character/?name=rick&status=dead");
     results.then(response => response.json())
         .then(data => {
             crearCards(data.results)
@@ -67,9 +63,9 @@ function selectDead() {
 }
 
 function crearCards(characters) {
-    let charactersContainer = document.querySelector(".characters-container")
+    let charactersContainer = document.querySelector(".characters-container");
     characters.forEach(character => {
-        console.log("4 "+character.name)
+    
         charactersContainer.innerHTML += `
     <div class="character-card">
         <span>${character.name}</span>
@@ -86,5 +82,12 @@ function crearCards(characters) {
         </div>
     </div>    
     `
-    });
-}
+ });
+};
+
+function cleanCards(){
+    let charactersContainer = document.getElementsByClassName("characters-container")[0]; 
+    while (charactersContainer.firstChild) {        
+        charactersContainer.removeChild(charactersContainer.firstChild);      
+    }
+};
