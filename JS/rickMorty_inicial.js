@@ -10,15 +10,6 @@ males.addEventListener("click", selectMales);
 alive.addEventListener("click", selectAlive);
 dead.addEventListener("click", selectDead);
 
-const getData=(apiURL)=>{
-    return fetch(apiURL)
-            .then(response => response.json())
-            .then(data => {
-                crearCards(data.results),
-                printPagination(data.info)
-            })
-}
-
 function selectAllCharacters() {
     if(document.body.children[3].className=="container"){
         let clasePadre=document.querySelector(".container");
@@ -28,9 +19,13 @@ function selectAllCharacters() {
         replaceClass.classList.replace("container","characters");
     }
     cleanCards();
-    const api="https://rickandmortyapi.com/api/character";
-    getData(api);
-}
+    const results = fetch("https://rickandmortyapi.com/api/character");
+    results.then(response => response.json())
+        .then(data => {
+            crearCards(data.results)
+            //printPagination(data.info)
+        })
+};
 
 function selectFemales() {
     if(document.body.children[3].className=="container"){
@@ -41,8 +36,12 @@ function selectFemales() {
         replaceClass.classList.replace("container","characters");
     }
     cleanCards();
-    const api = "https://rickandmortyapi.com/api/character/?gender=female";
-    getData(api);
+    const results = fetch("https://rickandmortyapi.com/api/character/?gender=female");
+    results.then(response => response.json())
+        .then(data => {             
+            crearCards(data.results)
+            //printPagination(data.info)
+        })
 };
 
 function selectMales() {
@@ -54,8 +53,12 @@ function selectMales() {
         replaceClass.classList.replace("container","characters");
     }
     cleanCards();
-    const api = "https://rickandmortyapi.com/api/character/?gender=male";
-    getData(api);
+    const results = fetch("https://rickandmortyapi.com/api/character/?gender=male");
+    results.then(response => response.json())
+        .then(data => {
+            crearCards(data.results)
+            //printPagination(data.info)
+        })
 };
 
 function selectAlive() {
@@ -67,8 +70,12 @@ function selectAlive() {
         replaceClass.classList.replace("container","characters");
     }
     cleanCards();
-    const api = "https://rickandmortyapi.com/api/character/?status=alive";
-    getData(api);
+    const results = fetch("https://rickandmortyapi.com/api/character/?status=alive");
+    results.then(response => response.json())
+        .then(data => {
+            crearCards(data.results)
+            //printPagination(data.info)
+        })
 };
 
 function selectDead() {
@@ -80,14 +87,16 @@ function selectDead() {
         replaceClass.classList.replace("container","characters");
     }
     cleanCards();
-    const api = "https://rickandmortyapi.com/api/character/?status=dead";
-    getData(api);
+    const results = fetch("https://rickandmortyapi.com/api/character/?status=dead");
+    results.then(response => response.json())
+        .then(data => {
+            crearCards(data.results)
+            //printPagination(data.info)
+        })
 }
 
 function crearCards(characters) {
-    cleanCards();
     let charactersContainer = document.querySelector(".characters-container");
-    
     characters.forEach(character => {
     
         charactersContainer.innerHTML += `
@@ -108,22 +117,9 @@ function crearCards(characters) {
  });
 };
 
-function printPagination(info){
-    let html =`
-    <li class="page-item">
-      <a class="button-pag" onclick="getData('${info.prev}')">Previous</a>
-    </li>
-    <li class="page-item">
-      <a class="button-pag" onclick="getData('${info.next}')">Next</a>
-    </li>
- `
-    document.querySelector(".pagination").innerHTML=html;
-}
-
 function cleanCards(){
     let charactersContainer = document.getElementsByClassName("characters-container")[0]; 
     while (charactersContainer.firstChild) {        
         charactersContainer.removeChild(charactersContainer.firstChild);      
     }
 };
-    
